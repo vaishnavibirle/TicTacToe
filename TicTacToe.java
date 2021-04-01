@@ -1,11 +1,7 @@
 package com.company;
-
 import java.util.Scanner;
-
-public class TicTacToe {
+public class TicTacToe_UC2 {
     public static void main(String[] args) {
-        //welcome message
-        System.out.println("Welcome to Tic Tac Toe Game");
         //TicTacToe Game board 3*3
         char[][] board = new char[3][3];
         //create board with dashes
@@ -15,18 +11,19 @@ public class TicTacToe {
             }
         }
         //Board
-        printBoard(board);
+        createBoard(board);
         choose();
+        printBoard();
 
     }
 
-    //for printing
-    public static void printBoard(char[][] board) {
+    //for creating
+    public static void createBoard(char[][] board) {
         //i represents the row
         for (int i = 0; i < 3; i++) {
             // j represents the column
             for (int j = 0; j < 3; j++) {
-                System.out.print(board[i][j]); //for not printing to in oneline
+                System.out.print(board[i][j]); //for not create to in oneline
             }
             System.out.println();
         }
@@ -45,9 +42,17 @@ public class TicTacToe {
         }
     }
 
-    public static void playGame() {
-
+    public static void printBoard(char[][] board) {
+        //i represents the row
+        for (int i = 0; i < 3; i++) {
+            // j represents the column
+            for (int j = 0; j < 3; j++) {
+                System.out.print(board[i][j]); //for not create to in oneline
+            }
+            System.out.println();
+        }
     }
+
 
 
 }
